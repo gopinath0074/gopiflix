@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoPiFlix Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Splash Screen with GoPiFlix Logo -->
+  <div class="splash-screen" id="splash-screen">
+    <h1 class="logo">GoPiFlix</h1>
+  </div>
+
+  <!-- Main Content Screen -->
+  <div class="main-content" id="main-content" style="display: none;">
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search for movies..." onkeyup="filterMovies()">
+    </div>
+
+    <!-- Movie Grid (all movies displayed) -->
+    <div class="movie-grid" id="movie-grid"></div>
+  </div>
+
+  <!-- Movie Details Popup -->
+  <div class="movie-popup" id="movie-popup" style="display: none;">
+    <div class="movie-popup-content">
+      <h2 id="movie-title"></h2>
+      <p id="movie-price"></p>
+      <label for="ticket-count">Number of Tickets:</label>
+      <input type="number" id="ticket-count" min="1" value="1">
+      <button onclick="calculatePrice()">Calculate Price</button>
+      <p id="total-price" style="display: none;"></p>
+      <button id="book-ticket-btn" onclick="bookTicket()" style="display: none;">Book Ticket</button>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
