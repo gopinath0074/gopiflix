@@ -1,2 +1,2 @@
 # gopiflix
-website similar to netflix
+a frontend mobile movie stream\booking website
